@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  server:
+    build: ./flaskdemo
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./flaskdemo:/app
+    environment:
+      FLASK_ENV: development
+  
+  client:
+    build: ./reactdemo
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./reactdemo:/user/src/app
+    depends_on:
+      - server
+
+

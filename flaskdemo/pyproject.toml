@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "demo"
+version = "0.1.0"
+description = "summa"
+authors = ["Gopinath R <rameshgopi1723@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+waitress = "^3.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
